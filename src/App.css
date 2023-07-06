@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Montserrat:wght@200;400;500;600&family=Noto+Sans:wght@100;200;300;400;500&family=Raleway:wght@100&display=swap");
+
+body {
+  font-family: "Raleway", sans-serif;
+  /* font-weight: 700; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  overflow: hidden;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (min-width: 745px) {
+}
+
+.main-content {
+}
+
+.icon-text {
+  display: none;
+  font-size: 0.8rem;
+  margin-left: 0.6rem;
+}
+
+@media (min-width: 1060px) {
+  .sidebar:hover .icon-text {
+    display: block;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* pulsar logo */
+.pulsar-logo-box {
+  /* border: 2px solid blue; */
+  overflow: hidden;
+}
+.pulsar-logo {
+  /* border: 2px solid green; */
+  animation-name: pulsar;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform: translateX(0rem);
+}
+.pulsar-logo-box:hover .pulsar-logo {
+  animation-play-state: paused !important;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes pulsar {
+  0% {
+    transform: translateX(90rem);
+  }
+  100% {
+    transform: translateX(-90rem);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* specification table */
+.specification-table {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 5px;
+}
+.specification-table__inside {
+  margin: 0.5rem;
+}
+.specification-table__inside h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+.specification-table__inside p {
 }

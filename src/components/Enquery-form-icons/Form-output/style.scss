@@ -1,0 +1,38 @@
+.output-container {
+  // background-color: rgb(7, 80, 238);
+  // border: 2px solid green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99vw;
+  height: 87vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+
+  & .output-inner {
+    background-color: rgb(7, 80, 238);
+    width: 70%;
+    height: 80%;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    & .close {
+      // border: 2px solid green;
+      display: flex;
+      justify-content: right;
+      padding: 0.6rem;
+
+      & .close-icon {
+        color: rgb(240, 43, 36);
+        font-size: 1.7rem;
+
+        &:hover {
+          transition: 0.6s ease-in-out;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
